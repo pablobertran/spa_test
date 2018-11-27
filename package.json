@@ -1,0 +1,22 @@
+{
+  "name": "fullstackjstest",
+  "version": "1.0.0",
+  "description": "Fullstack JS Test",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablobertran/spa_vanilla_js.git"
+  },
+  "author": "Pablo Bertran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pablobertran/spa_vanilla_js/issues"
+  },
+  "homepage": "https://github.com/pablobertran/spa_vanilla_js#README",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}

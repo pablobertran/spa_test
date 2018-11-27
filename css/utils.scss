@@ -1,0 +1,70 @@
+.container {
+  width: 100%;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.flex-content {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.row-between {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.row-start {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.pad-b-15 {
+  padding-bottom: 15px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.btn {
+  margin: 30px 8px 0 8px;
+  padding: 8px 30px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+
+  &.btn-grey {
+    background: #DDD;
+    color: #333;
+
+    &:hover {
+      background: #EFEFEF;
+    }
+  }
+
+  &.btn-green {
+    background: forestgreen;
+    color: white;
+
+    &:hover {
+      background: darkseagreen;
+      color: forestgreen;
+    }
+  }
+}

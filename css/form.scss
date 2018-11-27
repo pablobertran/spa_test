@@ -1,0 +1,189 @@
+.form__element {
+  padding: 5px 0;
+
+  & label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  & input[type="text"], & input[type="email"] {
+    width: 90%;
+    border: 2px solid $color6;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: 16px;
+    padding: 8px;
+    margin-top:5px;
+    outline: none;
+
+    &:focus {
+      border-color: $color1;
+    }
+  }
+
+  & .form__element-onfocus {
+    visibility: hidden;
+    font-size: 11px;
+    color: $color10;
+  }
+
+  &:focus-within span {
+    visibility: visible;
+  }
+
+  .styled-checkbox {
+    position: absolute; // take it out of document flow
+    opacity: 0; // hide it
+
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    & + label:before {
+      content: '';
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 20px;
+      height: 20px;
+      background: $white;
+      border: 2px solid $color11;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      margin-top: -4px;
+    }
+
+    &:hover + label:before {
+      border-color: $color1;
+    }
+    &:checked + label:before {
+      border-color: $color1;
+      background: $white;
+    }
+    &:disabled + label {
+      color: $color11;
+      cursor: auto;
+    }
+    &:disabled + label:before {
+      box-shadow: none;
+      background: $white;
+    }
+    &:checked + label:after {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 7px;
+      background: $white;
+      width: 2px;
+      height: 2px;
+      box-shadow:
+              2px 0 0 $color4,
+              4px 0 0 $color4,
+              4px -2px 0 $color4,
+              4px -4px 0 $color4,
+              4px -6px 0 $color4,
+              4px -8px 0 $color4;
+      transform: rotate(45deg);
+    }
+  }
+
+  .styled-radio {
+    position: absolute;
+    opacity: 0;
+
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    & + label:before {
+      content: '';
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 20px;
+      height: 20px;
+      background: $white;
+      border: 2px solid $color11;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      margin-top: -4px;
+    }
+
+    &:hover + label:before {
+      border-color: $color1;
+    }
+    &:checked + label:before {
+      border-color: $color1;
+      background: $white;
+    }
+    &:disabled + label {
+      color: $color11;
+      cursor: auto;
+    }
+    &:disabled + label:before {
+      box-shadow: none;
+      background: $white;
+    }
+    &:checked + label:after {
+      position: absolute;
+      left: 3px;
+      top: -21px;
+      content: "\2022";
+      font-size: 52px;
+    }
+  }
+
+  & .form__element__radio-group {
+    display: flex;
+    padding-top: 8px;
+
+    & .form__element__radio-item {
+      flex: 1 1 0;
+
+      & label {
+        font-weight: normal;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.optional {
+  width: 92%;
+  display: block;
+
+  &:after{
+    content: "optional";
+    float: right;
+    font-size: 11px;
+    font-weight: normal;
+    color: #999;
+    margin-top: 5px;
+  }
+}
+
+.btn {
+  margin: 30px 8px 0 8px;
+  padding: 8px 30px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+
+  &.btn-grey {
+    background: $color5;
+    color: $color4;
+  }
+
+  &.btn-green {
+    background: $green;
+    color: $white;
+  }
+}
